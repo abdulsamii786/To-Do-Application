@@ -19,6 +19,12 @@ body {
 h1 {
   font-size: 40px;
 }
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box {
   display: flex;
   justify-content: center;
@@ -29,60 +35,82 @@ h1 {
   padding: 10px;
   width: 60%;
 }
-button,
-input {
-  padding: 10px;
+#title {
+  padding: 5px;
   width: 100%;
-  margin: 10px;
   outline: none;
   border: none;
   font-size: 18px;
 }
-button {
+.btn {
   border-radius: 10px;
   background-color: #6f42c1;
   color: white;
   transition: 0.3s;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
 }
-button:hover {
+.add {
+  width: 100%;
+  margin: 10px 0px;
+}
+.btn:hover {
   background-color: #5329a1;
   transition: 0.3s;
 }
-input {
+#title {
   border-bottom: 1px solid;
   background-color: transparent;
 }
 ::placeholder {
   color: #999;
 }
-#para,
-#title-box {
-  width: 100%;
-}
-#para,
-#title-box {
-  max-height: 180px;
-  overflow: auto;
-}
 #error {
   color: red;
 }
-.inner-text {
+.show-todos-box {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-height: 250px;
+  overflow: auto;
+}
+.show-todos-box .todos {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  text-align: center;
-}
-.inner-text p {
-  width: 100%;
-  font-size: 16px;
-  padding: 10px;
-}
-.inner-text h4 {
   font-size: 20px;
-  padding: 10px;
+  padding: 5px 0px;
+
+}
+.show-todos-box :nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.274);
 }
 #name {
   font-weight: 600;
+}
+.btn-wrapper .delete {
+  background-color: red;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 6px 15px;
+  border-radius: 10px;
+}
+.btn-wrapper .edit {
+  background-color: rgb(50, 118, 173);
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding:6px 15px;
+  border-radius: 10px;
 }
